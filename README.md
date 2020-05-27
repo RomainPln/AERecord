@@ -73,7 +73,7 @@ let myModel: NSManagedObjectModel = AERecord.modelFromBundle(for: MyClass.self)
 let myStoreType = NSInMemoryStoreType
 let myConfiguration = ...
 let myStoreURL = AERecord.storeURL(for: "MyName")
-let myOptions = [NSMigratePersistentStoresAutomaticallyOption : true]
+let myOptions = [NSMigratePersistentStoresAutomaticallyOption : true] // Also consider NSInferMappingModelAutomaticallyOption : true
 do {
     try AERecord.loadCoreDataStack(managedObjectModel: myModel, storeType: myStoreType, configuration: myConfiguration, storeURL: myStoreURL, options: myOptions)
 } catch {
